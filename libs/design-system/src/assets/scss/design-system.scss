@@ -1,0 +1,68 @@
+@import './variables';
+@import './webfonts';
+@import './icons';
+@import './grids';
+
+// components
+@import './components/ds-button';
+@import './components/ds-input-field';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family-default);
+  color: var(--color-text-default);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-header);
+  color: var(--color-text-header);
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: #eee;
+  margin: 24px 0;
+}

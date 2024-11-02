@@ -1,0 +1,20 @@
+.ds-input-field {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: var(--input-radius);
+  color: var(--color-text-default);
+  font-family: var(--font-family-default);
+  font-size: 1.5rem;
+  height: var(--input-height);
+  outline: none;
+  padding: var(--input-padding);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-color: var(--color-primary-200);
+  }
+
+  &:focus {
+    border-color: var(--color-primary-400);
+  }
+}

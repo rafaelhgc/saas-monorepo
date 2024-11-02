@@ -1,0 +1,43 @@
+:root {
+  // colors
+  --color-text-default: #57606f;
+  --color-text-header: #2f3542;
+
+  --color-background: #ffffff;
+  --color-foreground: #f1f2f6;
+  --color-border: #ced6e0;
+
+  --color-primary-100: #e6f7f3;
+  --color-primary-200: #b3e7de;
+  --color-primary-300: #80d7c8;
+  --color-primary-400: #1abc9c;
+  --color-primary-500: #2d927e;
+  --color-primary-600: #31685d;
+  --color-primary-700: #273d39;
+  --color-primary-800: #293331;
+  --color-off-primary: #ffffff;
+
+  --color-secondary-100: #a4b0be;
+  --color-secondary-200: #747d8c;
+  --color-secondary-300: #57606f;
+  --color-secondary-400: #2f3542;
+  --color-secondary-500: #2f3542;
+  --color-secondary-600: #2f3542;
+  --color-secondary-700: #2f3542;
+  --color-secondary-800: #2f3542;
+  --color-off-secondary: #ffffff;
+
+  // button
+  --button-height: 42px;
+  --button-radius: 6px;
+  --button-padding: 0 12px;
+
+  // input
+  --input-height: 42px;
+  --input-radius: 6px;
+  --input-padding: 0 12px;
+
+  // fonts
+  --font-family-default: 'Raleway', sans-serif;
+  --font-family-header: 'Raleway', sans-serif;
+}

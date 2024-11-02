@@ -1,0 +1,47 @@
+.ds-button {
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: var(--button-radius);
+  display: inline-flex;
+  font-weight: 600;
+  height: var(--button-height);
+  justify-content: center;
+  padding: var(--button-padding);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.ds-button.ds-button-primary {
+  background-color: var(--color-primary-400);
+  border-color: var(--color-primary-400);
+  color: var(--color-off-primary);
+
+  &:hover {
+    background-color: var(--color-primary-300);
+    border-color: var(--color-primary-300);
+  }
+}
+
+.ds-button.ds-button-secondary {
+  background-color: var(--color-secondary-400);
+  border-color: var(--color-secondary-400);
+  color: var(--color-off-secondary);
+
+  &:hover {
+    background-color: var(--color-secondary-300);
+    border-color: var(--color-secondary-300);
+  }
+}
+
+.ds-button.ds-button-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text-header);
+
+  &:hover {
+    background-color: var(--color-foreground);
+    border-color: var(--color-foreground);
+  }
+}
