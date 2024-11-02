@@ -1,0 +1,32 @@
+.landing-welcome {
+  align-items: center;
+  background-color: var(--color-background);
+  background-image: radial-gradient(var(--color-primary-300) 0.75px, var(--color-background) 0.75px);
+  background-size: 15px 15px;
+  display: flex;
+  min-height: 50vh;
+  padding: 24px 0;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+  }
+
+  &__mailing {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 420px;
+    width: 100%;
+
+    input {
+      flex: 1;
+    }
+  }
+}
