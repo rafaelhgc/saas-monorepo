@@ -4,11 +4,13 @@
 
 .main-navigation-header {
   align-items: center;
+  background-color: var(--color-background);
   display: flex;
   height: 92px;
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 9;
 
   &__container {
     align-items: center;
@@ -35,5 +37,38 @@
     align-items: center;
     display: flex;
     gap: 24px;
+  }
+}
+
+.main-navigation-footer {
+  background-color: var(--color-foreground);
+  color: var(--color-text-muted);
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 32px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 12px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    a {
+      color: var(--color-primary-300);
+    }
   }
 }

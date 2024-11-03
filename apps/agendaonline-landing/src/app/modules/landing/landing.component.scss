@@ -1,12 +1,15 @@
-.landing-welcome {
+section {
   align-items: center;
+  display: flex;
+  min-height: 60vh;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.landing-welcome {
   background-color: var(--color-background);
   background-image: radial-gradient(var(--color-primary-300) 0.75px, var(--color-background) 0.75px);
   background-size: 15px 15px;
-  display: flex;
-  min-height: 50vh;
-  padding: 24px 0;
-  text-align: center;
 
   &__title {
     margin-bottom: 12px;
@@ -28,5 +31,193 @@
     input {
       flex: 1;
     }
+  }
+}
+
+.landing-features {
+  .features-list {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 48px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-item {
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    text-align: left;
+
+    &__header {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+
+      &__icon {
+        align-items: center;
+        background-color: var(--color-primary-400);
+        border-radius: 50%;
+        color: var(--color-off-primary);
+        display: flex;
+        height: 36px;
+        justify-content: center;
+        width: 36px;
+      }
+    }
+
+    &__content {
+    }
+  }
+}
+
+.landing-pricing {
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin-bottom: 64px;
+  }
+
+  .landing-pricing-list {
+    display: flex;
+    gap: 24px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .landing-pricing-item {
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 12px;
+
+    &__placeholder {
+      align-items: center;
+      color: var(--color-primary-400);
+      display: flex;
+      justify-content: center;
+    }
+
+    &__title {
+      color: var(--color-primary-400);
+      margin-bottom: 24px;
+    }
+
+    &__features {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+      margin-bottom: 24px;
+      text-align: left;
+
+      li {
+        align-items: center;
+        display: flex;
+        font-size: 1.4rem;
+        gap: 8px;
+
+        &.--muted {
+          color: var(--color-text-muted) !important;
+
+          .icon {
+            color: var(--color-text-muted) !important;
+          }
+        }
+
+        .icon {
+          color: var(--color-primary-400);
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &__price {
+      &__value {
+        font-size: 3.2rem;
+        font-weight: 700;
+
+        span {
+          color: var(--color-primary-400);
+        }
+
+        small {
+          color: var(--color-text-muted);
+          font-size: 1.6rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .landing-pricing-disclaimer {
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    margin: 12px 0;
+  }
+
+  .landing-pricing-list-custom {
+    align-items: center;
+    border: 1px solid var(--color-border);
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding: 24px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__placeholder {
+      color: var(--color-primary-400);
+    }
+
+    &__content {
+      text-align: left;
+      flex: 1;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+
+      &__title {
+        color: var(--color-primary-400);
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
+
+.landing-blog {
+  min-height: auto;
+  padding: 32px;
+  background-color: var(--color-primary-400);
+  color: var(--color-off-primary);
+
+  &__title {
+    color: var(--color-off-primary);
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    color: var(--color-off-primary);
+    margin-bottom: 24px;
   }
 }

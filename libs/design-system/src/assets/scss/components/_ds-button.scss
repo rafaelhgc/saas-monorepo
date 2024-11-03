@@ -2,14 +2,16 @@
   align-items: center;
   border: 2px solid transparent;
   border-radius: var(--button-radius);
+  cursor: pointer;
   display: inline-flex;
+  font-family: var(--font-family-default);
+  font-size: 1.6rem;
   font-weight: 600;
   height: var(--button-height);
   justify-content: center;
   padding: var(--button-padding);
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
