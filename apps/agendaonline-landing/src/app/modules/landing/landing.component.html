@@ -1,71 +1,112 @@
 <section class="landing-welcome">
   <div class="container">
-    <h1 class="landing-welcome__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eaque provident nobis incidunt voluptate dolores.</h1>
-    <p class="landing-welcome__subtitle">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est possimus ut, nisi consequuntur facilis repudiandae nostrum soluta natus, sunt blanditiis tempore corrupti sequi libero ipsam quis in voluptas facere dolorum?
-    </p>
-
-    <div class="landing-welcome__mailing">
-      <input type="email" dsInputField placeholder="yourmail@mail.com" />
-      <button type="submit" dsButton="secondary">
-        <span class="icon">send</span>
-      </button>
+    <div class="landing-welcome__content">
+      <div class="landing-welcome__value-proposition">
+        <h1 class="landing-welcome__title">
+          Reduza cancelamentos e aumente sua produtividade com agendamentos otimizados
+        </h1>
+        <h2 class="landing-welcome__subtitle">
+          Ofereça uma experiência de agendamento confiável e sem complicações para seu cliente
+        </h2>
+        <a href="" dsButton="primary">Click e veja como funciona <span class="icon">arrow_outward</span></a>
+      </div>
+      
+      <div class="landing-welcome__form">
+        <form>
+          <p>Estamos construindo a melhor plataforma de agendamento do mercado, se inscreva para testar gratuitamente</p>
+          <input type="text" name="name" placeholder="Seu nome completo" required />
+          <input type="email" name="email" placeholder="Seu e-mail para contato" required />
+          <input type="text" name="pains" placeholder="Conte como sua experiência de agendamento pode melhorar" required />
+          <select name="daily_appointments" required>
+            <option value="">Selecione quantos agendamentos acontecem por dia</option>
+            <option value="1-10">Entre 1 e 10</option>
+            <option value="10-30">Entre 10 e 30</option>
+            <option value="30-50">Entre 30 e 50</option>
+            <option value="50+">Mais de 50</option>
+          </select>
+          <button type="submit">
+            quero testar grátis
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="landing-features">
   <div class="container">
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <h2>Agendamento simples, rápido e eficiente para o seu negócio</h2>
     <hr />
 
     <div class="features-list">
       <div class="feature-item">
         <div class="feature-item__header">
           <div class="feature-item__header__icon">
-            <span class="icon">package</span>
+            <span class="icon">check_circle</span>
           </div>
-          <h3 class="feature-item__header__title">Lorem ipsum dolor sit</h3>
+          <h3 class="feature-item__header__title">Organização e Controle Total</h3>
         </div>
         <div class="feature-item__content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit, officiis consectetur fugiat similique et est facilis!</p>
+          <p>Mantenha sua agenda organizada e evite confusões. Com nossa plataforma, você visualiza todos os compromissos em um só lugar e gerencia seus horários com facilidade.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-item__header">
           <div class="feature-item__header__icon">
-            <span class="icon">package</span>
+            <span class="icon">notifications_active</span>
           </div>
-          <h3 class="feature-item__header__title">Lorem ipsum dolor sit</h3>
+          <h3 class="feature-item__header__title">Lembretes Automáticos</h3>
         </div>
         <div class="feature-item__content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit, officiis consectetur fugiat similique et est facilis!</p>
+          <p>Reduza o número de faltas e cancelamentos com lembretes automáticos. Notificações via Whatsapp, e-mail e SMS garantem que seus clientes estejam sempre informados e compareçam no horário marcado.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-item__header">
           <div class="feature-item__header__icon">
-            <span class="icon">package</span>
+            <span class="icon">schedule</span>
           </div>
-          <h3 class="feature-item__header__title">Lorem ipsum dolor sit</h3>
+          <h3 class="feature-item__header__title">Agendamento Online 24/7</h3>
         </div>
         <div class="feature-item__content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit, officiis consectetur fugiat similique et est facilis!</p>
+          <p>Deixe que seus clientes façam reservas no horário que preferirem, sem a necessidade de ligar ou esperar. O sistema de agendamento online facilita a vida deles e melhora a sua gestão.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-item__header">
           <div class="feature-item__header__icon">
-            <span class="icon">package</span>
+            <span class="icon">palette</span>
           </div>
-          <h3 class="feature-item__header__title">Lorem ipsum dolor sit</h3>
+          <h3 class="feature-item__header__title">Experiência Personalizada</h3>
         </div>
         <div class="feature-item__content">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit, officiis consectetur fugiat similique et est facilis!</p>
+          <p>Ajuste o sistema para atender às suas necessidades. Personalize mensagens de boas-vindas, lembretes e notificações para oferecer um atendimento único e acolhedor.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__header">
+          <div class="feature-item__header__icon">
+            <span class="icon">event_available</span>
+          </div>
+          <h3 class="feature-item__header__title">Sincronização com o Seu Calendário</h3>
+        </div>
+        <div class="feature-item__content">
+          <p>Integre a plataforma ao seu calendário pessoal para garantir que todos os compromissos estejam em um só lugar. Mais praticidade e menos confusão na sua rotina.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-item__header">
+          <div class="feature-item__header__icon">
+            <span class="icon">description</span>
+          </div>
+          <h3 class="feature-item__header__title">Relatórios de Desempenho</h3>
+        </div>
+        <div class="feature-item__content">
+          <p>Entenda o fluxo de seus agendamentos com relatórios detalhados. Identifique horários de pico e ajuste sua disponibilidade para maximizar a ocupação.</p>
         </div>
       </div>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit, officiis consectetur fugiat similique et est facilis!</p>
+    <p>Maximize sua produtividade e ofereça uma experiência de agendamento simples e confiável. Cadastre-se agora e experimente todas as funcionalidades!</p>
   </div>
 </section>
 
