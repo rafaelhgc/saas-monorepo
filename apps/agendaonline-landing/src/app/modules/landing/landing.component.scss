@@ -76,6 +76,50 @@ section {
       display: flex;
       flex-direction: column;
       gap: 16px;
+
+      input,
+      select {
+        padding: 12px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 100%;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          border-color: var(--color-primary-300);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        &:focus {
+          border-color: var(--color-primary-500);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          outline: none;
+        }
+      }
+
+      button {
+        background-color: var(--color-primary-400);
+        color: #fff;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          background-color: var(--color-primary-500);
+          transform: scale(1.05);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+          transform: scale(0.98);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+      }
     }
   }
 }
