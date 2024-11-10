@@ -10,7 +10,7 @@ section {
   background-color: var(--color-background);
   background-image: radial-gradient(var(--color-primary-300) 0.75px, var(--color-background) 0.75px);
   background-size: 15px 15px;
-  
+
   .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -47,7 +47,7 @@ section {
 
   &__form {
     flex: 1;
-    max-width: 400px;
+    max-width: 440px;
     padding: 20px;
     background: var(--color-background);
     border-radius: 12px;
@@ -155,13 +155,6 @@ section {
   .landing-welcome__value-proposition .landing-welcome__subtitle {
     font-size: 1.5rem;
   }
-
-  .landing-welcome__form form input,
-  .landing-welcome__form form select,
-  .landing-welcome__form form button {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
 }
 
 .landing-features {
@@ -205,9 +198,6 @@ section {
 
     p {
       font-size: 1.3rem;
-    }
-
-    &__content {
     }
   }
 }
