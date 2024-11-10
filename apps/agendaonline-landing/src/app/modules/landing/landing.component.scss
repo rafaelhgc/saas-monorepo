@@ -10,7 +10,7 @@ section {
   background-color: var(--color-background);
   background-image: radial-gradient(var(--color-primary-300) 0.75px, var(--color-background) 0.75px);
   background-size: 15px 15px;
-  
+
   .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -47,7 +47,7 @@ section {
 
   &__form {
     flex: 1;
-    max-width: 400px;
+    max-width: 440px;
     padding: 20px;
     background: var(--color-background);
     border-radius: 12px;
@@ -76,50 +76,6 @@ section {
       display: flex;
       flex-direction: column;
       gap: 16px;
-
-      input,
-      select {
-        padding: 12px;
-        font-size: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        width: 100%;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
-        &:hover {
-          border-color: var(--color-primary-300);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        &:focus {
-          border-color: var(--color-primary-500);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-          outline: none;
-        }
-      }
-
-      button {
-        background-color: var(--color-primary-400);
-        color: #fff;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: 600;
-        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-
-        &:hover {
-          background-color: var(--color-primary-500);
-          transform: scale(1.05);
-          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        &:active {
-          transform: scale(0.98);
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-        }
-      }
     }
   }
 }
@@ -154,13 +110,6 @@ section {
 
   .landing-welcome__value-proposition .landing-welcome__subtitle {
     font-size: 1.5rem;
-  }
-
-  .landing-welcome__form form input,
-  .landing-welcome__form form select,
-  .landing-welcome__form form button {
-    font-size: 0.9rem;
-    padding: 10px;
   }
 }
 
@@ -205,9 +154,6 @@ section {
 
     p {
       font-size: 1.3rem;
-    }
-
-    &__content {
     }
   }
 }

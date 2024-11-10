@@ -2,7 +2,7 @@ import { Directive, ElementRef, inject, OnInit, Renderer2 } from '@angular/core'
 
 @Directive({
   standalone: true,
-  selector: 'input[dsInputField], textarea[dsInputField]',
+  selector: 'input[dsInputField], textarea[dsInputField], select[dsInputField]',
 })
 export class DSInputFieldDirective implements OnInit {
   elementRef = inject(ElementRef);
