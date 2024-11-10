@@ -12,17 +12,17 @@ section {
   background-size: 15px 15px;
 
   .container {
-    max-width: 1024px;
     margin: 0 auto;
+    max-width: 1024px;
     padding: 0 20px;
   }
 
   &__content {
-    display: flex;
-    gap: 32px;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
   }
 
   &__value-proposition {
@@ -30,40 +30,40 @@ section {
     text-align: left;
 
     .landing-welcome__title {
+      color: #333;
       font-size: 3.2rem;
       font-weight: 900;
-      color: #333;
       margin-bottom: 24px;
     }
 
     .landing-welcome__subtitle {
+      color: #666;
       font-size: 2.3rem;
       font-weight: 500;
-      color: #666;
-      margin-bottom: 24px;
       line-height: 1.5;
+      margin-bottom: 24px;
     }
   }
 
   &__form {
-    flex: 1;
-    max-width: 440px;
-    padding: 20px;
     background: var(--color-background);
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 440px;
+    padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: translateY(-5px);
       box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
     }
 
     &-title {
+      color: #333;
       font-size: 1.5rem;
       font-weight: 600;
-      color: #333;
       margin-bottom: 16px;
     }
 
@@ -202,7 +202,9 @@ section {
       flex-direction: column;
       gap: 12px;
       list-style: none;
+      margin: 0;
       margin-bottom: 24px;
+      padding: 0;
       text-align: left;
 
       li {
@@ -210,6 +212,7 @@ section {
         display: flex;
         font-size: 1.4rem;
         gap: 8px;
+        margin: 0;
 
         &.--muted {
           color: var(--color-text-muted) !important;
@@ -268,8 +271,8 @@ section {
     }
 
     &__content {
-      text-align: left;
       flex: 1;
+      text-align: left;
 
       @media screen and (max-width: 768px) {
         text-align: center;
@@ -287,10 +290,10 @@ section {
 }
 
 .landing-blog {
-  min-height: auto;
-  padding: 32px;
   background-color: var(--color-primary-400);
   color: var(--color-off-primary);
+  min-height: auto;
+  padding: 32px;
 
   &__title {
     color: var(--color-off-primary);

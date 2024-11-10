@@ -1,0 +1,23 @@
+<div class="blog-list">
+  <div class="container">
+    <section class="blog-list-section">
+      <h2 class="blog-list-section__title">Últimos artigos</h2>
+
+      <div class="blog-list-content">
+        @for(post of posts; track post) {
+        <a [routerLink]="['/blog', 'foo']" class="blog-list-item">
+          <article>
+            <div class="blog-list-item__placeholder"></div>
+            <div class="blog-list-item__content">
+              <h3 class="blog-list-item__content__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h3>
+              <div class="blog-list-item__content__info">
+                <div>31/12/2024</div>
+              </div>
+            </div>
+          </article>
+        </a>
+        }
+      </div>
+    </section>
+  </div>
+</div>

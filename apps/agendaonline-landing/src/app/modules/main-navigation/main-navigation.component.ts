@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { DSButtonDirective } from '@monorepo/design-system';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet, DSButtonDirective, CommonModule],
+  imports: [RouterOutlet, DSButtonDirective, CommonModule, RouterLink],
   templateUrl: './main-navigation.component.html',
   styleUrls: ['./main-navigation.component.scss'],
 })
