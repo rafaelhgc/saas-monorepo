@@ -1,19 +1,13 @@
-<div class="blog-post">
+<div class="blog-post" *ngIf="post$ | async; let post">
   <div class="container">
+    @if(post.data) {
     <div class="blog-post-grid">
       <div class="blog-post-grid__content">
-        <h2 class="blog-post__title">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+        <h2 class="blog-post__title">{{ post.data.title }}</h2>
 
-        <div class="blog-post__published-at">Publicado em 31/12/2024</div>
+        <div class="blog-post__published-at">Publicado em {{ post.data.createdAt | date : 'dd/MM/yyyy' }}</div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus libero atque nemo nam laboriosam, dolores numquam at doloremque dignissimos velit deleniti animi aspernatur voluptatibus. Illo tenetur quae dicta delectus a.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus libero atque nemo nam laboriosam, dolores numquam at doloremque dignissimos velit deleniti animi aspernatur voluptatibus. Illo tenetur quae dicta delectus a.</p>
-        <ul>
-          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, numquam! Beatae nostrum excepturi vel, quaerat rerum ab illum, quidem amet aperiam accusamus reprehenderit natus? Culpa optio quas impedit itaque odio.</li>
-          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, numquam! Beatae nostrum excepturi vel, quaerat rerum ab illum, quidem amet aperiam accusamus reprehenderit natus? Culpa optio quas impedit itaque odio.</li>
-          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, numquam! Beatae nostrum excepturi vel, quaerat rerum ab illum, quidem amet aperiam accusamus reprehenderit natus? Culpa optio quas impedit itaque odio.</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus libero atque nemo nam laboriosam, dolores numquam at doloremque dignissimos velit deleniti animi aspernatur voluptatibus. Illo tenetur quae dicta delectus a.</p>
+        <div class="topic-details__questions__item__content__answer" [innerHTML]="post.data.content | markdown"></div>
       </div>
 
       <div class="blog-post-grid__aside">
@@ -39,5 +33,6 @@
         </a>
       </div>
     </div>
+    }
   </div>
 </div>

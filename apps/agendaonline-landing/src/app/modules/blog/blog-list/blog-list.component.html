@@ -1,23 +1,27 @@
-<div class="blog-list">
+<div class="blog-list" *ngIf="posts$ | async; let posts">
   <div class="container">
     <section class="blog-list-section">
       <h2 class="blog-list-section__title">Últimos artigos</h2>
 
+      @if (posts.data && posts.data.length) {
       <div class="blog-list-content">
-        @for(post of posts; track post) {
-        <a [routerLink]="['/blog', 'foo']" class="blog-list-item">
+        @for (post of posts.data; track $index) {
+        <a [routerLink]="['/blog', post.slug]" class="blog-list-item">
           <article>
-            <div class="blog-list-item__placeholder"></div>
+            <div class="blog-list-item__placeholder">
+              <img src="/public/images/{{ post.imageCover }}" [alt]="post.title" />
+            </div>
             <div class="blog-list-item__content">
-              <h3 class="blog-list-item__content__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h3>
+              <h3 class="blog-list-item__content__title">{{ post.title }}</h3>
               <div class="blog-list-item__content__info">
-                <div>31/12/2024</div>
+                <div>{{ post.createdAt | date : 'dd/MM/yyyy' }}</div>
               </div>
             </div>
           </article>
         </a>
         }
       </div>
+      }
     </section>
   </div>
 </div>
