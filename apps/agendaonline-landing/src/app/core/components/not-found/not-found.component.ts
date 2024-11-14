@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { DSButtonDirective } from '@monorepo/design-system';
 
 @Component({
   standalone: true,
-  imports: [RouterLink, DSButtonDirective],
+  imports: [DSButtonDirective],
   styleUrls: ['./not-found.component.scss'],
   template: `
     <div class="not-found">
