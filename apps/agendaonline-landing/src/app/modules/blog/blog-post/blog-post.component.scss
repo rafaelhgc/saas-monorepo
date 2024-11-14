@@ -1,6 +1,13 @@
 .blog-post {
   padding: 64px 0;
 
+  &__placeholder {
+    height: 240px;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 24px;
+  }
+
   &__title {
     margin-bottom: 24px;
   }
@@ -72,11 +79,13 @@
     background-color: var(--color-primary-100);
     height: 64px;
     width: 64px;
+    background-size: cover;
+    background-position: center center;
   }
 
   &__title {
     flex: 1;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: normal;
     transition: color 0.3s ease-in-out;
 

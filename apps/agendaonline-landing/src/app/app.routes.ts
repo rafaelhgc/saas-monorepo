@@ -18,6 +18,15 @@ export const routes: Route[] = [
         path: '',
         loadComponent: () => import('./modules/landing/landing.component').then((m) => m.LandingComponent),
       },
+      {
+        path: '404',
+        loadComponent: () => import('./core/components/not-found/not-found.component').then((m) => m.NotFoundComponent),
+      },
+      {
+        path: '**',
+        redirectTo: '404',
+        pathMatch: 'full',
+      },
     ],
   },
 ];
