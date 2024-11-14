@@ -12,7 +12,22 @@ export class BlogService {
       coverImage: 'importancia-das-plataformas-de-agendamento.jpg',
       createdAt: '2024-11-13T00:16:50.676Z',
       slug: 'importancia-das-plataformas-de-agendamento',
-      tags: ['AgendamentoOnline', 'Produtividade', 'Eficiência', 'AgendaOnlineMe', 'GestãoDeTempo', 'FerramentasDeAgendamento', 'SatisfaçãoDoCliente'],
+      tags: [
+        'AgendamentoOnline',
+        'Produtividade',
+        'Eficiência',
+        'AgendaOnlineMe',
+        'GestãoDeTempo',
+        'FerramentasDeAgendamento',
+        'SatisfaçãoDoCliente',
+      ],
+      related: [
+        {
+          title: 'Importância das Plataformas de Agendamento para Negócios',
+          coverImage: 'importancia-das-plataformas-de-agendamento.jpg',
+          slug: 'importancia-das-plataformas-de-agendamento',
+        },
+      ],
     },
   ] as Post[];
 

@@ -3,6 +3,7 @@
     @if(post.data) {
     <div class="blog-post-grid">
       <div class="blog-post-grid__content">
+        <div class="blog-post__placeholder" style="background-image: url('/images/{{ post.data.coverImage }}');"></div>
         <h2 class="blog-post__title">{{ post.data.title }}</h2>
 
         <div class="blog-post__published-at">Publicado em {{ post.data.createdAt | date : 'dd/MM/yyyy' }}</div>
@@ -11,34 +12,21 @@
 
         <h3 class="blog-post__title">Tags</h3>
         <ul>
-          <li *ngFor="let tag of post.data.tags">
-            #{{ tag }}
-          </li>
+          <li *ngFor="let tag of post.data.tags">#{{ tag }}</li>
         </ul>
-
       </div>
 
       <div class="blog-post-grid__aside">
         <header class="blog-post-grid__aside__title">Veja também</header>
 
-        <a href="" class="blog-post-related">
+        @for (related of post.data.related; track $index) {
+        <a [routerLink]="['/blog', related.slug]" class="blog-post-related">
           <article>
-            <div class="blog-post-related__placeholder"></div>
-            <h3 class="blog-post-related__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <div class="blog-post-related__placeholder" style="background-image: url('/images/{{ post.data.coverImage }}');"></div>
+            <h3 class="blog-post-related__title">{{ related.title }}</h3>
           </article>
         </a>
-        <a href="" class="blog-post-related">
-          <article>
-            <div class="blog-post-related__placeholder"></div>
-            <h3 class="blog-post-related__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-          </article>
-        </a>
-        <a href="" class="blog-post-related">
-          <article>
-            <div class="blog-post-related__placeholder"></div>
-            <h3 class="blog-post-related__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-          </article>
-        </a>
+        }
       </div>
     </div>
     }

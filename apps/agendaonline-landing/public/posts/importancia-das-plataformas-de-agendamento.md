@@ -5,5 +5,6 @@ Ao utilizar uma plataforma de agendamento, os profissionais conseguem reduzir as
 Outro benefício das plataformas de agendamento online é o fortalecimento da relação entre o cliente e o profissional. Ao oferecer um método prático e confiável de reserva, o cliente percebe a dedicação em oferecer um atendimento de qualidade. Com a **agendaonline.me**, empresas de todos os tamanhos podem transformar suas operações, tornando o processo de agendamento mais **rápido, eficiente e seguro**.
 
 ## Leia mais sobre agendamento em segmentos específicos
-- [Agendamentos para Salões de Beleza](./02-agendamento-para-salao-de-beleza.md)
-- [Agendamentos para Dentistas](./03-agendamento-para-dentistas.md)
+
+- [Agendamentos para Salões de Beleza](/blog/agendamento-para-salao-de-beleza)
+- [Agendamentos para Dentistas](/blog/agendamento-para-dentistas)
