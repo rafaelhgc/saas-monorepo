@@ -8,6 +8,14 @@
         <div class="blog-post__published-at">Publicado em {{ post.data.createdAt | date : 'dd/MM/yyyy' }}</div>
 
         <div class="topic-details__questions__item__content__answer" [innerHTML]="post.data.content | markdown"></div>
+
+        <h3 class="blog-post__title">Tags</h3>
+        <ul>
+          <li *ngFor="let tag of post.data.tags">
+            #{{ tag }}
+          </li>
+        </ul>
+
       </div>
 
       <div class="blog-post-grid__aside">

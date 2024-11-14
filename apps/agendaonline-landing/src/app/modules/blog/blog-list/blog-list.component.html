@@ -6,10 +6,10 @@
       @if (posts.data && posts.data.length) {
       <div class="blog-list-content">
         @for (post of posts.data; track $index) {
-        <a [routerLink]="['/blog', post.slug]" class="blog-list-item">
+        <a [routerLink]="['/blog', post.slug]" class="blog-list-item" [title]="post.title">
           <article>
             <div class="blog-list-item__placeholder">
-              <img src="/public/images/{{ post.imageCover }}" [alt]="post.title" />
+              <img src="/images/{{ post.coverImage }}" [alt]="post.title" />
             </div>
             <div class="blog-list-item__content">
               <h3 class="blog-list-item__content__title">{{ post.title }}</h3>

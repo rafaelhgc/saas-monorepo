@@ -4,4 +4,5 @@ export interface Post {
   createdAt: string;
   slug: string;
   content: string;
+  tags: string[];
 }
