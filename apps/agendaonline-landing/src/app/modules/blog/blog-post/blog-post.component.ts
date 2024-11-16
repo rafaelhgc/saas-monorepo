@@ -40,7 +40,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       )
       .subscribe({
         next: (post) => {
-          this.title.setTitle(`${this.title.getTitle()} | ${post.data?.title}`);
+          this.title.setTitle(`${post.data?.title} | ${this.title.getTitle()}`);
         },
       });
 
