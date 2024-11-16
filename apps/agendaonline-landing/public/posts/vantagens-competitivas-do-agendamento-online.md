@@ -3,7 +3,3 @@ No mercado atual, oferecer uma experiência moderna de agendamento é um diferen
 Com um sistema de agendamento online, o profissional melhora a gestão de sua agenda e reduz o número de ausências, ganhando mais tempo para focar no atendimento. Essa organização também contribui para o aumento da **satisfação do cliente** e fidelização, especialmente em um mercado competitivo.
 
 A **agendaonline.me** oferece uma vantagem estratégica, ajudando negócios de todos os portes a manterem uma agenda bem organizada, promovendo um atendimento ágil e satisfatório.
-
-## Leia mais sobre como o agendamento pode ajudar seu negócio
-- [Como o Agendamento Online Aumenta a Produtividade](./07-como-o-agendamento-online-aumenta-a-produtividade.md)
-- [Agendamentos para Consultórios](./05-agendamento-para-consultorios.md)

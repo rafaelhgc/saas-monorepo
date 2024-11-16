@@ -3,7 +3,3 @@ Em um salão de beleza, onde a movimentação de clientes pode ser intensa, ter 
 Além disso, o agendamento online reduz o número de faltas, já que o cliente recebe lembretes automáticos de seu compromisso. Isso ajuda a otimizar a agenda e permite que o salão mantenha uma operação **mais fluida e produtiva**. O cliente, por sua vez, sente-se mais confiante e valorizado por poder agendar de maneira prática.
 
 Para salões de beleza que desejam fidelizar clientes, a plataforma **agendaonline.me** representa um diferencial competitivo. Ela oferece aos clientes uma experiência moderna e conveniente, com total segurança e rapidez. Esse tipo de facilidade contribui para a satisfação do cliente e eleva a qualidade do atendimento.
-
-## Leia mais sobre a importância do agendamento online
-- [Importância das Plataformas de Agendamento para Negócios](./01-importancia-das-plataformas-de-agendamento.md)
-- [Agendamentos para Dentistas](./03-agendamento-para-dentistas.md)
