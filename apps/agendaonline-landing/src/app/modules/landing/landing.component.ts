@@ -8,4 +8,22 @@ import { DSButtonDirective, DSInputFieldDirective } from '@monorepo/design-syste
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent {}
+export class LandingComponent {
+  areas = [
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+    { title: 'lorem ipsum', placeholder: 'star' },
+  ];
+}

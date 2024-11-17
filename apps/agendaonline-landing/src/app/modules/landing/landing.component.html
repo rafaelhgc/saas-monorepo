@@ -104,6 +104,26 @@
   </div>
 </section>
 
+<section class="landing-can-i-use">
+  <div class="container">
+    <h2 class="landing-pricing__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <p class="landing-pricing__subtitle">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque distinctio, placeat eos id aliquid accusamus repellat quis quaerat maiores perferendis commodi dolorem est, sequi optio porro nesciunt excepturi, voluptatibus rem.
+    </p>
+
+    <div class="landing-can-i-use__areas">
+      @for (area of areas; track $index) {
+      <div class="landing-can-i-use__item">
+        <div class="landing-can-i-use__item__placeholder">
+          <span class="icon">{{ area.placeholder }}</span>
+        </div>
+        <h3 class="landing-can-i-use__item__title">{{ area.title }}</h3>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
 <section class="landing-pricing">
   <div class="container">
     <h2 class="landing-pricing__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
@@ -277,6 +297,6 @@
       </p>
     </div>
 
-    <a [routerLink]="['/blog']" dsButton="secondary">read our blog</a>
+    <a [routerLink]="['/blog']" dsButton="secondary">leia nosso blog</a>
   </div>
 </section>
