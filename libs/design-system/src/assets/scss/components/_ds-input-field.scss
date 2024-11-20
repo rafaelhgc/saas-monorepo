@@ -17,4 +17,8 @@
   &:focus {
     border-color: var(--color-primary-400);
   }
+
+  &.ng-invalid.ng-touched {
+    border-color: #ff6b81;
+  }
 }

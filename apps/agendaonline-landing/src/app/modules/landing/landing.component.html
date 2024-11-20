@@ -8,21 +8,28 @@
       </div>
 
       <div class="landing-welcome__form">
-        <form>
-          <p>Estamos construindo a melhor plataforma de agendamento do mercado,<br/>
+        <div #formSuccess class="landing-welcome__form__success">
+          <span class="success"><span class="icon">check</span></span>
+          <h3>Sucesso!</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+
+        <form #formOptIn class="landing-welcome__form__optin" [formGroup]="optInForm">
+          <p>
+            Estamos construindo a melhor plataforma de agendamento do mercado,<br />
             se inscreva para <span class="highlight">testar gratuitamente</span>
           </p>
-          <input type="text" name="name" placeholder="Seu nome completo" required dsInputField />
-          <input type="email" name="email" placeholder="Seu e-mail para contato" required dsInputField />
-          <input type="text" name="pains" placeholder="Conte como sua experiência de agendamento pode melhorar" required dsInputField />
-          <select name="daily_appointments" required dsInputField>
+          <input type="text" formControlName="name" placeholder="Seu nome completo" dsInputField />
+          <input type="email" formControlName="email" placeholder="Seu e-mail para contato" dsInputField />
+          <input type="text" formControlName="pains" placeholder="Conte como sua experiência de agendamento pode melhorar" dsInputField />
+          <select formControlName="daily_appointments" dsInputField>
             <option value="">Selecione quantos agendamentos acontecem por dia</option>
             <option value="1-10">Entre 1 e 10</option>
             <option value="10-30">Entre 10 e 30</option>
             <option value="30-50">Entre 30 e 50</option>
             <option value="50+">Mais de 50</option>
           </select>
-          <button type="submit" dsButton="primary">quero testar grátis</button>
+          <button type="button" dsButton="primary" (click)="onSubmitOptIn()">quero testar grátis</button>
         </form>
       </div>
     </div>
@@ -32,8 +39,11 @@
 <section class="landing-features">
   <div class="container">
     <h2>Agendamento simples, rápido e eficiente para o seu negócio</h2>
-    <p>Estamos desenvolvendo uma solução incrível para transformar a maneira como você <span class="highlight">organiza seus agendamentos</span>. Cadastre-se agora para receber novidades em primeira mão e garantir acesso antecipado às nossas funcionalidades</p>
-    <br/>
+    <p>
+      Estamos desenvolvendo uma solução incrível para transformar a maneira como você <span class="highlight">organiza seus agendamentos</span>. Cadastre-se agora para receber novidades em primeira mão e garantir acesso antecipado às nossas
+      funcionalidades
+    </p>
+    <br />
     <div class="features-list">
       <div class="feature-item">
         <div class="feature-item__header">
@@ -109,7 +119,8 @@
   <div class="container">
     <h2 class="landing-pricing__title">Agendamentos simplificados, para todos os setores</h2>
     <p class="landing-pricing__subtitle">
-      Descubra como nossa plataforma pode <span class="highlight">transformar sua rotina</span>. Reduza o tempo perdido com tarefas manuais, ofereça conveniência aos seus clientes e concentre-se no que realmente importa: <span class="highlight">fazer seu negócio crescer</span>. A agendaonline.me é ideal para:
+      Descubra como nossa plataforma pode <span class="highlight">transformar sua rotina</span>. Reduza o tempo perdido com tarefas manuais, ofereça conveniência aos seus clientes e concentre-se no que realmente importa:
+      <span class="highlight">fazer seu negócio crescer</span>. A agendaonline.me é ideal para:
     </p>
 
     <div class="landing-can-i-use__areas">

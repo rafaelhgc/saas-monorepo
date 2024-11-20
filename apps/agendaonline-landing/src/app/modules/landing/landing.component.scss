@@ -7,11 +7,11 @@ section {
 }
 
 .highlight {
-  color: var(--color-primary-400); 
-  font-weight: bold;
-  background-color: #f0f8ff; 
-  padding: 2px 4px;
+  background-color: #f0f8ff;
   border-radius: 4px;
+  color: var(--color-primary-400);
+  font-weight: bold;
+  padding: 2px 4px;
 }
 
 .landing-welcome {
@@ -62,6 +62,36 @@ section {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &__success {
+      align-items: center;
+      animation: expand 0.6s forwards 0.3s;
+      display: flex;
+      display: none;
+      flex-direction: column;
+      margin-top: 12px;
+      opacity: 0;
+      transform: scale(0);
+
+      &.--is-active {
+        display: flex;
+      }
+
+      .success {
+        align-items: center;
+        background: var(--color-primary-400);
+        border-radius: 50%;
+        color: var(--color-off-primary);
+        display: flex;
+        height: 48px;
+        justify-content: center;
+        width: 48px;
+      }
+    }
+
+    &__optin.--has-reduct {
+      animation: reduct 0.3s ease-in forwards, shrink 0.3s ease-in forwards;
+    }
 
     &:hover {
       box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
@@ -342,8 +372,8 @@ section {
 
   &__areas {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
     @media screen and (max-width: 1024px) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -356,12 +386,12 @@ section {
 
   &__item {
     align-items: center;
+    cursor: default;
     display: flex;
     flex: 1;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
-    flex-direction: column;
-    cursor: default;
 
     &__placeholder {
       align-items: center;
@@ -371,13 +401,37 @@ section {
       display: flex;
       height: 64px;
       justify-content: center;
+      margin-bottom: 12px;
       text-align: center;
       width: 64px;
-      margin-bottom: 12px;
 
       .icon {
         font-size: 4.2rem;
       }
     }
+  }
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes reduct {
+  0% {
+    height: 378px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+    transform: scale(0);
   }
 }

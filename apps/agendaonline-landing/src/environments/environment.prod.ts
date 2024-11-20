@@ -3,7 +3,7 @@ export const environment = {
   mixpanel: {
     token: '13a2c7f784648d4ebcaa75020d0a10e4',
     configuration: { debug: false, track_pageview: false, persistence: 'localStorage' },
-    platform: 'storefront',
+    platform: 'agendaonline-landing',
     environment: 'production',
   },
 };

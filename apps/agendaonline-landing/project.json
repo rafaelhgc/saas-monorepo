@@ -29,22 +29,11 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/agendaonline-landing/src/environments/environment.ts",
+              "replace": "apps/agendaonline-landing/src/environments/environment.prod.ts",
               "with": "apps/agendaonline-landing/src/environments/environment.prod.ts"
             }
           ],
-          "budgets": [
-            {
-              "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
-            },
-            {
-              "type": "anyComponentStyle",
-              "maximumWarning": "2kb",
-              "maximumError": "1mb'
-            }
-          ],
+          "budgets": [],
           "outputHashing": "all"
         },
         "development": {

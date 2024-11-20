@@ -45,7 +45,7 @@ export class AnalyticsService {
   }
 
   private send(event: string, parameters: Record<string, unknown>): void {
-    if (environment.production) {
+    if (!environment.production) {
       console.debug('AnalyticsService', { event, parameters });
       return;
     }
