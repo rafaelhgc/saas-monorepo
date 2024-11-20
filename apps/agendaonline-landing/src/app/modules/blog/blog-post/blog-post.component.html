@@ -3,7 +3,7 @@
     @if(post.data) {
     <div class="blog-post-grid">
       <div class="blog-post-grid__content">
-        <div class="blog-post__placeholder" style="background-image: url('/images/{{ post.data.coverImage }}');"></div>
+        <div [title]="post.data.title" class="blog-post__placeholder" style="background-image: url('/images/{{ post.data.coverImage }}');"></div>
         <h2 class="blog-post__title">{{ post.data.title }}</h2>
 
         <div class="blog-post__published-at">Publicado em {{ post.data.createdAt | date : 'dd/MM/yyyy' }}</div>

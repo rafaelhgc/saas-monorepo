@@ -3,13 +3,15 @@
     <div class="landing-welcome__content">
       <div class="landing-welcome__value-proposition">
         <h1 class="landing-welcome__title">Reduza cancelamentos e aumente sua produtividade com agendamentos otimizados</h1>
-        <h2 class="landing-welcome__subtitle">Ofereça uma experiência de agendamento confiável e sem complicações para seu cliente</h2>
+        <h2 class="landing-welcome__subtitle">Ofereça uma experiência de agendamento <span class="highlight">confiável e sem complicações</span> para seu cliente</h2>
         <a href="" dsButton="primary">clique e veja como funciona <span class="icon">arrow_outward</span></a>
       </div>
 
       <div class="landing-welcome__form">
         <form>
-          <p>Estamos construindo a melhor plataforma de agendamento do mercado, se inscreva para testar gratuitamente</p>
+          <p>Estamos construindo a melhor plataforma de agendamento do mercado,<br/>
+            se inscreva para <span class="highlight">testar gratuitamente</span>
+          </p>
           <input type="text" name="name" placeholder="Seu nome completo" required dsInputField />
           <input type="email" name="email" placeholder="Seu e-mail para contato" required dsInputField />
           <input type="text" name="pains" placeholder="Conte como sua experiência de agendamento pode melhorar" required dsInputField />
@@ -30,8 +32,8 @@
 <section class="landing-features">
   <div class="container">
     <h2>Agendamento simples, rápido e eficiente para o seu negócio</h2>
-    <hr />
-
+    <p>Estamos desenvolvendo uma solução incrível para transformar a maneira como você <span class="highlight">organiza seus agendamentos</span>. Cadastre-se agora para receber novidades em primeira mão e garantir acesso antecipado às nossas funcionalidades</p>
+    <br/>
     <div class="features-list">
       <div class="feature-item">
         <div class="feature-item__header">
@@ -100,22 +102,21 @@
         </div>
       </div>
     </div>
-    <p>Maximize sua produtividade e ofereça uma experiência de agendamento simples e confiável. Cadastre-se agora e experimente todas as funcionalidades!</p>
   </div>
 </section>
 
 <section class="landing-can-i-use">
   <div class="container">
-    <h2 class="landing-pricing__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <h2 class="landing-pricing__title">Agendamentos simplificados, para todos os setores</h2>
     <p class="landing-pricing__subtitle">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque distinctio, placeat eos id aliquid accusamus repellat quis quaerat maiores perferendis commodi dolorem est, sequi optio porro nesciunt excepturi, voluptatibus rem.
+      Descubra como nossa plataforma pode <span class="highlight">transformar sua rotina</span>. Reduza o tempo perdido com tarefas manuais, ofereça conveniência aos seus clientes e concentre-se no que realmente importa: <span class="highlight">fazer seu negócio crescer</span>. A agendaonline.me é ideal para:
     </p>
 
     <div class="landing-can-i-use__areas">
       @for (area of areas; track $index) {
       <div class="landing-can-i-use__item">
         <div class="landing-can-i-use__item__placeholder">
-          <span class="icon">{{ area.placeholder }}</span>
+          <span title="Agenda para {{ area.title }}" class="icon">{{ area.placeholder }}</span>
         </div>
         <h3 class="landing-can-i-use__item__title">{{ area.title }}</h3>
       </div>
@@ -124,7 +125,7 @@
   </div>
 </section>
 
-<section class="landing-pricing">
+<!-- <section class="landing-pricing">
   <div class="container">
     <h2 class="landing-pricing__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
     <p class="landing-pricing__subtitle">
@@ -286,7 +287,7 @@
       <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae facilis quibusdam dolorem sequi debitis doloribus!</span>
     </p>
   </div>
-</section>
+</section> -->
 
 <section class="landing-blog">
   <div class="container">
@@ -297,6 +298,6 @@
       </p>
     </div>
 
-    <a [routerLink]="['/blog']" dsButton="secondary">leia nosso blog</a>
+    <a title="Dicas para alavancar seu negócio" [routerLink]="['/blog']" dsButton="secondary">leia nosso blog</a>
   </div>
 </section>
