@@ -22,8 +22,8 @@ export class LandingComponent implements OnInit {
   optInForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    pains: new FormControl('', [Validators.required]),
-    daily_appointments: new FormControl('', [Validators.required]),
+    pains: new FormControl('', []),
+    daily_appointments: new FormControl('', []),
   });
 
   areas = [
@@ -54,6 +54,9 @@ export class LandingComponent implements OnInit {
   }
 
   onSubmitOptIn() {
+    this.analytics.click('optin', {
+      valid: !this.optInForm.invalid
+    });
     if (this.optInForm.invalid) {
       this.optInForm.markAllAsTouched();
       return;
@@ -61,6 +64,15 @@ export class LandingComponent implements OnInit {
 
     this.formOptInElementRef.nativeElement.classList.add('--has-reduct');
     this.formSuccessElementRef.nativeElement.classList.add('--is-active');
-    this.analytics.callback('optin', this.optInForm.value);
+    this.analytics.callback('optin', {
+      name: this.optInForm.value.name,
+      email: this.optInForm.value.email,
+      pains: this.optInForm.value.pains,
+      daily_appointments: this.optInForm.value.daily_appointments
+    });
+  }
+
+  sendClickDemo() {
+    this.analytics.click('lp-demo');
   }
 }
