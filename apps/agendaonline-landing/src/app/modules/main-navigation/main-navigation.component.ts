@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { DSButtonDirective } from '@monorepo/design-system';
+import { DSButtonDirective } from '@saas/design-system';
 
 @Component({
   standalone: true,

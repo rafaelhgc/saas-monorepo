@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DSButtonDirective } from '@monorepo/design-system';
+import { DSButtonDirective } from '@saas/design-system';
 
 @Component({
   standalone: true,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { DSButtonDirective, DSInputFieldDirective } from '@monorepo/design-system';
+import { DSButtonDirective, DSInputFieldDirective } from '@saas/design-system';
 
 @Component({
   standalone: true,

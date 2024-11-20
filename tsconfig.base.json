@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@monorepo/design-system": ["libs/design-system/src/index.ts"]
+      "@saas/design-system": ["libs/design-system/src/index.ts"],
+      "@saas/commons/services": ["libs/commons/src/lib/services/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
