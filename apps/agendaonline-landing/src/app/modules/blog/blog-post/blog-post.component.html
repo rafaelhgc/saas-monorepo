@@ -20,7 +20,7 @@
         <header class="blog-post-grid__aside__title">Veja também</header>
 
         @for (related of post.data.related; track $index) {
-        <a [routerLink]="['/blog', related.slug]" class="blog-post-related" [title]="related.title">
+        <a [routerLink]="['/blog', related.slug]" class="blog-post-related" [title]="related.title" (click)="sendClick(related.slug)">
           <article>
             <div class="blog-post-related__placeholder" style="background-image: url('/images/{{ related.coverImage }}');"></div>
             <h3 class="blog-post-related__title">{{ related.title }}</h3>

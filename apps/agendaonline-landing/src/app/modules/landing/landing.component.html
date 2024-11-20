@@ -4,14 +4,14 @@
       <div class="landing-welcome__value-proposition">
         <h1 class="landing-welcome__title">Reduza cancelamentos e aumente sua produtividade com agendamentos otimizados</h1>
         <h2 class="landing-welcome__subtitle">Ofereça uma experiência de agendamento <span class="highlight">confiável e sem complicações</span> para seu cliente</h2>
-        <a href="" dsButton="primary">clique e veja como funciona <span class="icon">arrow_outward</span></a>
+        <a (click)="sendClickDemo()" href="" dsButton="primary">clique e veja como funciona <span class="icon">arrow_outward</span></a>
       </div>
 
       <div class="landing-welcome__form">
         <div #formSuccess class="landing-welcome__form__success">
           <span class="success"><span class="icon">check</span></span>
           <h3>Sucesso!</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+          <p>Em breve, você receberá mais informações sobre o lançamento da nossa plataforma e como pode começar a utilizá-la para otimizar seus agendamentos</p>
         </div>
 
         <form #formOptIn class="landing-welcome__form__optin" [formGroup]="optInForm">
@@ -19,7 +19,7 @@
             Estamos construindo a melhor plataforma de agendamento do mercado,<br />
             se inscreva para <span class="highlight">testar gratuitamente</span>
           </p>
-          <input type="text" formControlName="name" placeholder="Seu nome completo" dsInputField />
+          <input type="text" formControlName="name" placeholder="Seu nome" dsInputField />
           <input type="email" formControlName="email" placeholder="Seu e-mail para contato" dsInputField />
           <input type="text" formControlName="pains" placeholder="Conte como sua experiência de agendamento pode melhorar" dsInputField />
           <select formControlName="daily_appointments" dsInputField>

@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Post } from '../modes/post.model';
 import { MarkdownPipe } from '../pipes/markdown.pipe';
 import { BlogService } from '../services/blog.service';
+import { AnalyticsService } from '@saas/commons/services';
 
 type PostState = { loading?: boolean; failure?: boolean; data?: Post };
 
@@ -24,6 +25,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   slug = '';
   post$ = new BehaviorSubject<PostState>({ loading: true });
   onDestroy$ = new Subject<void>();
+  analytics = inject(AnalyticsService);
 
   get slug$() {
     return this.route.params.pipe(
@@ -53,10 +55,22 @@ export class BlogPostComponent implements OnInit, OnDestroy {
         next: (post) => this.post$.next({ data: post }),
         error: () => this.router.navigate(['/404'], { queryParams: { slug: this.slug } }),
       });
+
+      this.analytics.view('blog-post', {
+        'slug': this.slug
+      });
+
   }
 
   ngOnDestroy() {
     this.onDestroy$.next();
     this.onDestroy$.unsubscribe();
+  }
+
+  sendClick(slug: string) {
+    this.analytics.click('blog-related', {
+      related: this.slug, 
+      to: slug
+    })
   }
 }
