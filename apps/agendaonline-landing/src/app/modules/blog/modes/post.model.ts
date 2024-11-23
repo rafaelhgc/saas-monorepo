@@ -8,6 +8,7 @@ export interface Post {
   title: string;
   coverImage: string;
   createdAt: string;
+  description: string;
   slug: string;
   content: string;
   tags: string[];
