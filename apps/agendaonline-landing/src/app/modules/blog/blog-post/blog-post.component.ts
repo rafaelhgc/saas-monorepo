@@ -1,5 +1,5 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import { BehaviorSubject, filter, map, Subject, switchMap, takeUntil, tap } from 'rxjs';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -22,6 +22,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   route = inject(ActivatedRoute);
   router = inject(Router);
   title = inject(Title);
+  meta = inject(Meta);
   slug = '';
   post$ = new BehaviorSubject<PostState>({ loading: true });
   onDestroy$ = new Subject<void>();
@@ -42,7 +43,21 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       )
       .subscribe({
         next: (post) => {
-          this.title.setTitle(`${post.data?.title} | ${this.title.getTitle()}`);
+          this.title.setTitle(`${post.data?.title} | agendaonline.me`);
+
+          this.meta.addTags([
+            { name: 'description', content: `${post.data?.description}` },
+            { name: 'keywords', content: `${post.data?.tags}` },
+            { name: 'author', content: 'agendaonline' },
+            { name: 'og:title', content: `${post.data?.title}` },
+            { name: 'og:description', content: `${post.data?.description}` },
+            { name: 'og:image', content: `https://agendaonline.me/images/${post.data?.coverImage}` },
+            { name: 'og:url', content: `https://agendaonline.me/blog/${post.data?.slug}` },
+            { name: 'og:type', content: 'article' },
+            { name: 'og:site_name', content: 'agendaonline.me' },
+            { name: 'og:locale', content: 'pt_BR' }
+          ]);
+
         },
       });
 
