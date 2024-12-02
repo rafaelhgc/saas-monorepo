@@ -5,9 +5,11 @@ import { AnalyticsConfig, provideAnalyticsService } from '@saas/commons/services
 
 import { routes } from './app.routes';
 import { environment } from '../environments/environment';
+import { provideClientHydration } from '@angular/platform-browser';
 
 export const config: ApplicationConfig = {
   providers: [
+    provideClientHydration(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),

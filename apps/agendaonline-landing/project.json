@@ -23,13 +23,21 @@
           }
         ],
         "styles": ["apps/agendaonline-landing/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "server": "apps/agendaonline-landing/src/main.server.ts",
+        "prerender": {
+          "discoverRoutes": false,
+          "routesFile": "apps/agendaonline-landing/routes.txt"
+        },
+        "ssr": {
+          "entry": "apps/agendaonline-landing/server.ts"
+        }
       },
       "configurations": {
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/agendaonline-landing/src/environments/environment.prod.ts",
+              "replace": "apps/agendaonline-landing/src/environments/environment.ts",
               "with": "apps/agendaonline-landing/src/environments/environment.prod.ts"
             }
           ],
