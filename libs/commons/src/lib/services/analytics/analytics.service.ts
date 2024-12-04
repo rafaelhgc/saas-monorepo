@@ -1,6 +1,7 @@
-import { Injectable, InjectionToken, inject } from '@angular/core';
+import { Injectable, InjectionToken, PLATFORM_ID, inject } from '@angular/core';
 import mixpanel, { Config } from 'mixpanel-browser';
 import { environment } from 'apps/agendaonline-landing/src/environments/environment';
+import { isPlatformBrowser } from '@angular/common';
 
 export const ANALYTICS_CONFIG = new InjectionToken<AnalyticsConfig>('ANALYTICS_CONFIG');
 
@@ -13,10 +14,10 @@ export interface AnalyticsConfig {
 
 @Injectable({ providedIn: 'root' })
 export class AnalyticsService {
-  private config: AnalyticsConfig;
+  config = inject(ANALYTICS_CONFIG);
+  platformId = inject(PLATFORM_ID);
 
   constructor() {
-    this.config = inject(ANALYTICS_CONFIG);
     mixpanel.init(this.config.token, this.config.configuration as Partial<Config>);
   }
 
@@ -45,7 +46,9 @@ export class AnalyticsService {
   }
 
   private send(event: string, parameters: Record<string, unknown>): void {
-    if (!environment.production) {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    if (!environment.production || JSON.parse(localStorage.getItem('skip-analytics') || 'false')) {
       console.debug('AnalyticsService', { event, parameters });
       return;
     }

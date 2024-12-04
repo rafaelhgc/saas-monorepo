@@ -58,8 +58,8 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.optinService.toggle.pipe(takeUntil(this.destroyRef$)).subscribe(() => {
-      this.formOptInElementRef.nativeElement.classList.remove('--has-reduct');
-      this.formSuccessElementRef.nativeElement.classList.remove('--is-active');
+      this.formOptInElementRef?.nativeElement.classList.remove('--has-reduct');
+      this.formSuccessElementRef?.nativeElement.classList.remove('--is-active');
     });
     this.analytics.view('landing');
   }
