@@ -4,6 +4,9 @@
 
 `npm ci && npm run nx run agendaonline-landing:serve`
 
+## skip analytics 
+Paste on console: `localStorage.setItem('skip-analytics', true)`
+
 ```sh
 #!/bin/sh
 
