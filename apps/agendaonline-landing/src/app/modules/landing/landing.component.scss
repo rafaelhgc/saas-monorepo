@@ -63,6 +63,19 @@ section {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+    &__wrapper.--is-expanded {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9;
+    }
+
     &__success {
       align-items: center;
       animation: expand 0.6s forwards 0.3s;

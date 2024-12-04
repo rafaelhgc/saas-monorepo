@@ -1,23 +1,30 @@
-import { Component, ElementRef, inject, OnInit, ViewChild, viewChild } from '@angular/core';
+import { Component, ElementRef, inject, OnDestroy, OnInit, ViewChild, viewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AnalyticsService } from '@saas/commons/services';
 import { DSButtonDirective, DSInputFieldDirective } from '@saas/design-system';
+import { OptInService } from '../../core/services/opt-in.service';
+import { CommonModule } from '@angular/common';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   standalone: true,
-  imports: [DSButtonDirective, DSInputFieldDirective, RouterLink, ReactiveFormsModule],
+  imports: [DSButtonDirective, DSInputFieldDirective, RouterLink, ReactiveFormsModule, CommonModule],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, OnDestroy {
   @ViewChild('formSuccess')
   formSuccessElementRef!: ElementRef;
 
   @ViewChild('formOptIn')
   formOptInElementRef!: ElementRef;
 
+  destroyRef$ = new Subject<void>();
+
   analytics = inject(AnalyticsService);
+
+  optinService = inject(OptInService);
 
   optInForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -50,29 +57,39 @@ export class LandingComponent implements OnInit {
   ];
 
   ngOnInit() {
+    this.optinService.toggle.pipe(takeUntil(this.destroyRef$)).subscribe(() => {
+      this.formOptInElementRef.nativeElement.classList.remove('--has-reduct');
+      this.formSuccessElementRef.nativeElement.classList.remove('--is-active');
+    });
     this.analytics.view('landing');
   }
 
+  ngOnDestroy() {
+    this.destroyRef$.next();
+    this.destroyRef$.unsubscribe();
+  }
+
   onSubmitOptIn() {
-    this.analytics.click('optin', {
-      valid: !this.optInForm.invalid
-    });
+    this.analytics.click('optin', { valid: !this.optInForm.invalid });
+
     if (this.optInForm.invalid) {
       this.optInForm.markAllAsTouched();
       return;
     }
 
+    this.optinService.emit(false);
     this.formOptInElementRef.nativeElement.classList.add('--has-reduct');
     this.formSuccessElementRef.nativeElement.classList.add('--is-active');
     this.analytics.callback('optin', {
       name: this.optInForm.value.name,
       email: this.optInForm.value.email,
       pains: this.optInForm.value.pains,
-      daily_appointments: this.optInForm.value.daily_appointments
+      daily_appointments: this.optInForm.value.daily_appointments,
     });
   }
 
   sendClickDemo() {
+    this.optinService.emit(true);
     this.analytics.click('lp-demo');
   }
 }
