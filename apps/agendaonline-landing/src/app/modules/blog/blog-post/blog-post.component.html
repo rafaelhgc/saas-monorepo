@@ -3,7 +3,7 @@
     @if(post.data) {
     <div class="blog-post-grid">
       <div class="blog-post-grid__content">
-        <div [title]="post.data.title" class="blog-post__placeholder" style="background-image: url('/images/{{ post.data.coverImage }}');"></div>
+        <div [title]="post.data.title" class="blog-post__placeholder" style="background-image: url('/images/cropped/{{ post.data.coverImage.main }}');"></div>
         <h2 class="blog-post__title">{{ post.data.title }}</h2>
 
         <div class="blog-post__published-at">Publicado em {{ post.data.createdAt | date : 'dd/MM/yyyy' }}</div>
@@ -22,7 +22,7 @@
         @for (related of post.data.related; track $index) {
         <a [routerLink]="['/blog', related.slug]" class="blog-post-related" [title]="related.title" (click)="sendClick(related.slug)">
           <article>
-            <div class="blog-post-related__placeholder" style="background-image: url('/images/{{ related.coverImage }}');"></div>
+            <div class="blog-post-related__placeholder" style="background-image: url('/images/cropped/{{ related.coverImage.main }}');"></div>
             <h3 class="blog-post-related__title">{{ related.title }}</h3>
           </article>
         </a>

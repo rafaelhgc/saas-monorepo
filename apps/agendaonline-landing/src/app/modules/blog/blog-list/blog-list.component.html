@@ -8,7 +8,7 @@
         @for (post of posts.data; track $index) {
         <a [routerLink]="['/blog', post.slug]" class="blog-list-item" [title]="post.title">
           <article>
-            <div class="blog-list-item__placeholder" style="background-image: url('/images/{{ post.coverImage }}');"></div>
+            <div class="blog-list-item__placeholder" style="background-image: url('/images/cropped/{{ post.coverImage.main }}');"></div>
             <div class="blog-list-item__content">
               <h3 class="blog-list-item__content__title">{{ post.title }}</h3>
               <div class="blog-list-item__content__info">
